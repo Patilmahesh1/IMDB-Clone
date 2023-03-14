@@ -1,0 +1,63 @@
+.card-body img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    animation: fade-in .3s ease-in-out;
+}
+
+.overlay.show{
+    display: block;
+}
+
+.mymodal {
+    position: fixed;
+    width: 60%;
+    /* height: 300px; */
+    background-color: fff;
+    background-color: #fff;
+    top: 25%;
+    left: 20%;
+    border-radius: 6px;
+    box-shadow: 10px 20px 20px rgba(0,0,0,.2);
+    display: none;
+    animation: side-down .4s ease-in-out;
+}
+
+.mymodal.show{
+    display: block;
+}
+.mymodal .card-header .myclose{
+    float: right;
+    color: #000;
+}
+
+
+@keyframes side-down{
+    from{
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
